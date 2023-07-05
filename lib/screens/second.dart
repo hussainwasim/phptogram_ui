@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swipable/flutter_swipable.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:ui/screens/home.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key});
@@ -19,9 +21,8 @@ class _SecondPageState extends State<SecondPage> {
           children: [
             IconButton(
               onPressed: () {
-                Navigator.pop(
-                  context,
-                );
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyHomePage()));
               },
               icon: Icon(Icons.menu),
               color: Colors.white,
@@ -90,85 +91,93 @@ class _SecondPageState extends State<SecondPage> {
               child: Center(
                 child: Stack(
                   children: [
-                    Transform.rotate(
-                      angle: -25,
-                      child: Container(
-                        height: 320,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFE3E9F0),
-                          borderRadius: BorderRadius.circular(11),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: ClipRRect(
+                    Swipable(
+                      child: Transform.rotate(
+                        angle: -25,
+                        child: Container(
+                          height: 320,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE3E9F0),
                             borderRadius: BorderRadius.circular(11),
-                            child: Image.asset(
-                              'assets/images/moun.jpeg',
-                              fit: BoxFit.fill,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(11),
+                              child: Image.asset(
+                                'assets/images/moun.jpeg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Transform.rotate(
-                      angle: 515,
-                      child: Container(
-                        height: 320,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFE3E9F0),
-                          borderRadius: BorderRadius.circular(11),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: ClipRRect(
+                    Swipable(
+                      child: Transform.rotate(
+                        angle: 515,
+                        child: Container(
+                          height: 320,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE3E9F0),
                             borderRadius: BorderRadius.circular(11),
-                            child: Image.asset(
-                              'assets/images/sky.jpg',
-                              fit: BoxFit.fill,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(11),
+                              child: Image.asset(
+                                'assets/images/sky.jpg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Transform.rotate(
-                      angle: -50,
-                      child: Container(
-                        height: 320,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFE3E9F0),
-                          borderRadius: BorderRadius.circular(11),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: ClipRRect(
+                    Swipable(
+                      child: Transform.rotate(
+                        angle: -50,
+                        child: Container(
+                          height: 320,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE3E9F0),
                             borderRadius: BorderRadius.circular(11),
-                            child: Image.asset(
-                              'assets/images/mo2.jpeg',
-                              fit: BoxFit.fill,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(11),
+                              child: Image.asset(
+                                'assets/images/mo2.jpeg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Transform.rotate(
-                      angle: 0,
-                      child: Container(
-                        height: 320,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFE3E9F0),
-                          borderRadius: BorderRadius.circular(11),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: ClipRRect(
+                    Swipable(
+                      child: Transform.rotate(
+                        angle: 0,
+                        child: Container(
+                          height: 320,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE3E9F0),
                             borderRadius: BorderRadius.circular(11),
-                            child: Image.asset(
-                              'assets/images/sky.jpg',
-                              fit: BoxFit.fill,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(11),
+                              child: Image.asset(
+                                'assets/images/sky.jpg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),

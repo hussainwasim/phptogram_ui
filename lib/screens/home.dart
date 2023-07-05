@@ -26,8 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondPage()));
+                Navigator.pop(context);
               },
               icon: Icon(Icons.menu),
               color: Colors.white,
